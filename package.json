@@ -1,0 +1,52 @@
+{
+  "name": "gitea-label-sync",
+  "version": "1.0.0",
+  "description": "Sync the Gitea repo's label.",
+  "homepage": "https://github.com/dragonish/gitea-label-sync",
+  "repository": "https://github.com/dragonish/gitea-label-sync",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "vite build",
+    "postbuild": "tsx ./build.ts"
+  },
+  "keywords": [
+    "gitea",
+    "label",
+    "labels",
+    "sync"
+  ],
+  "author": "dragonish",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.17.1",
+    "chai": "^5.2.1",
+    "eslint": "^9.33.0",
+    "globals": "^16.3.0",
+    "mocha": "^11.7.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.11.0"
+  },
+  "publishConfig": {
+    "directory": "publish"
+  }
+}
